@@ -19,6 +19,8 @@
     float round_seconds;
     float completed_seconds;
     NSTimer *timer;
+    
+    UIButton *reset_button;
 }
 
 @end
@@ -46,7 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(input_seconds)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(input_seconds)];
     self.title = @"Alert A Minute";
     round_seconds = [[[NSUserDefaults standardUserDefaults] valueForKey:USER_SECONDS_KEY] floatValue];
     if (0 == round_seconds){
@@ -91,7 +93,33 @@
         label.center = self.view.center;
         [self.view addSubview:label];
     }
+    
+    if (nil == reset_button){
+        float width = self.view.frame.size.width/3.f;
+        reset_button = [[UIButton alloc] init];
+        [reset_button setFrame:CGRectMake(width, self.view.frame.size.height-100.f, width, 60.f)];
+        if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]){
+            
+        }else{
+            
+        }
+        reset_button.layer.masksToBounds = YES;
+        reset_button.layer.cornerRadius = 8.f;
+        reset_button.backgroundColor = [UIColor grayColor];
+        reset_button.titleLabel.text = @"Reset";
+        reset_button.titleLabel.textColor = [UIColor whiteColor];
+        [reset_button setTitle:@"Reset" forState:UIControlStateNormal];
+        reset_button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
+        [reset_button addTarget:self action:@selector(reset) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:reset_button];
+    }
     [self start];
+}
+
+-(void)reset{
+    completed_seconds = 0.f;
+    label.text = [NSString stringWithFormat:@"%.1f",round_seconds-completed_seconds];
+    [self updateProgressWithNumber:completed_seconds];
 }
 
 -(void)play_sound{
