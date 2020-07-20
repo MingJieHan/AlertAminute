@@ -21,6 +21,7 @@
     NSTimer *timer;
     
     UIButton *reset_button;
+    SystemSoundID alert_sound_Id;
 }
 
 @end
@@ -49,7 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(input_seconds)];
-    self.title = @"Alert A Minute";
+    self.title = @"Circulate Timer";
     round_seconds = [[[NSUserDefaults standardUserDefaults] valueForKey:USER_SECONDS_KEY] floatValue];
     if (0 == round_seconds){
         round_seconds = 5.f;
@@ -123,12 +124,12 @@
 }
 
 -(void)play_sound{
-    if (nil == player){
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"abc" ofType:@"wav"];
-        player = [[AVPlayer alloc] initWithURL:[NSURL fileURLWithPath:path]];
+    if (alert_sound_Id == 0 ){
+        NSString *file = [[NSBundle mainBundle] pathForResource:@"abc" ofType:@"wav"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:file], &alert_sound_Id);
+        
     }
-    [player seekToTime:CMTimeMake(0, 1.f)];
-    [player play];
+    AudioServicesPlaySystemSound(alert_sound_Id);
 }
 
 -(void)stop{
