@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0A5B8725428F6B006BBCEA /* button_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8025428F6B006BBCEA /* button_pressed@3x.png */; };
+		EE0A5B8825428F6B006BBCEA /* button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8125428F6B006BBCEA /* button_pressed@2x.png */; };
+		EE0A5B8925428F6B006BBCEA /* button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8225428F6B006BBCEA /* button_pressed.png */; };
+		EE0A5B8A25428F6B006BBCEA /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8325428F6B006BBCEA /* background.jpg */; };
+		EE0A5B8B25428F6B006BBCEA /* button_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8425428F6B006BBCEA /* button_normal@3x.png */; };
+		EE0A5B8C25428F6B006BBCEA /* button_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8525428F6B006BBCEA /* button_normal@2x.png */; };
+		EE0A5B8D25428F6B006BBCEA /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8625428F6B006BBCEA /* button_normal.png */; };
 		EE33FD0024B74AD600BE53F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33FCFF24B74AD600BE53F8 /* AppDelegate.m */; };
 		EE33FD0624B74AD600BE53F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33FD0524B74AD600BE53F8 /* ViewController.m */; };
 		EE33FD0924B74AD600BE53F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE33FD0724B74AD600BE53F8 /* Main.storyboard */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE0A5B8025428F6B006BBCEA /* button_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_pressed@3x.png"; sourceTree = "<group>"; };
+		EE0A5B8125428F6B006BBCEA /* button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_pressed@2x.png"; sourceTree = "<group>"; };
+		EE0A5B8225428F6B006BBCEA /* button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_pressed.png; sourceTree = "<group>"; };
+		EE0A5B8325428F6B006BBCEA /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		EE0A5B8425428F6B006BBCEA /* button_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_normal@3x.png"; sourceTree = "<group>"; };
+		EE0A5B8525428F6B006BBCEA /* button_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_normal@2x.png"; sourceTree = "<group>"; };
+		EE0A5B8625428F6B006BBCEA /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
 		EE33FCFB24B74AD600BE53F8 /* Circulate Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Circulate Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE33FCFE24B74AD600BE53F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE33FCFF24B74AD600BE53F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +56,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0A5B7F25428F6B006BBCEA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EE0A5B8325428F6B006BBCEA /* background.jpg */,
+				EE0A5B8625428F6B006BBCEA /* button_normal.png */,
+				EE0A5B8525428F6B006BBCEA /* button_normal@2x.png */,
+				EE0A5B8425428F6B006BBCEA /* button_normal@3x.png */,
+				EE0A5B8225428F6B006BBCEA /* button_pressed.png */,
+				EE0A5B8125428F6B006BBCEA /* button_pressed@2x.png */,
+				EE0A5B8025428F6B006BBCEA /* button_pressed@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		EE33FCF224B74AD600BE53F8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +94,7 @@
 				EE33FCFF24B74AD600BE53F8 /* AppDelegate.m */,
 				EE33FD0424B74AD600BE53F8 /* ViewController.h */,
 				EE33FD0524B74AD600BE53F8 /* ViewController.m */,
+				EE0A5B7F25428F6B006BBCEA /* images */,
 				EE33FD1724B7511800BE53F8 /* abc.wav */,
 				EE33FD0724B74AD600BE53F8 /* Main.storyboard */,
 				EE33FD0A24B74AD700BE53F8 /* Assets.xcassets */,
@@ -137,6 +166,13 @@
 				EE33FD0E24B74AD700BE53F8 /* LaunchScreen.storyboard in Resources */,
 				EE33FD1824B7511800BE53F8 /* abc.wav in Resources */,
 				EE33FD0B24B74AD700BE53F8 /* Assets.xcassets in Resources */,
+				EE0A5B8825428F6B006BBCEA /* button_pressed@2x.png in Resources */,
+				EE0A5B8725428F6B006BBCEA /* button_pressed@3x.png in Resources */,
+				EE0A5B8C25428F6B006BBCEA /* button_normal@2x.png in Resources */,
+				EE0A5B8A25428F6B006BBCEA /* background.jpg in Resources */,
+				EE0A5B8D25428F6B006BBCEA /* button_normal.png in Resources */,
+				EE0A5B8925428F6B006BBCEA /* button_pressed.png in Resources */,
+				EE0A5B8B25428F6B006BBCEA /* button_normal@3x.png in Resources */,
 				EE33FD0924B74AD600BE53F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanmingjie.yogatimer;
 				PRODUCT_NAME = "Circulate Timer";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,6 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanmingjie.yogatimer;
 				PRODUCT_NAME = "Circulate Timer";
 				TARGETED_DEVICE_FAMILY = "1,2";

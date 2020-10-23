@@ -20,6 +20,7 @@
     float completed_seconds;
     NSTimer *timer;
     
+    UIImageView *backgroundImageView;
     UIButton *reset_button;
     SystemSoundID alert_sound_Id;
 }
@@ -56,10 +57,19 @@
         round_seconds = 5.f;
     }
     recording_color = [UIColor colorWithRed:70.f/255.f green:136.f/255.f blue:241.f/255.f alpha:1.f];
+    
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"background" ofType:@"jpg"];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    UIImage *image = [[UIImage alloc] initWithData:data scale:UIScreen.mainScreen.scale];
+    backgroundImageView = [[UIImageView alloc] initWithImage:image];
+    [backgroundImageView setFrame:CGRectMake(0.f, 0.f, UIScreen.mainScreen.bounds.size.width,UIScreen.mainScreen.bounds.size.height)];
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:backgroundImageView];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    [backgroundImageView setCenter:self.view.center];
     if (nil == progressLayer){
         float button_width = 60.f;
         if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]){
@@ -106,10 +116,10 @@
         }
         reset_button.layer.masksToBounds = YES;
         reset_button.layer.cornerRadius = 8.f;
-        reset_button.backgroundColor = [UIColor grayColor];
-        reset_button.titleLabel.text = @"Reset";
-        reset_button.titleLabel.textColor = [UIColor whiteColor];
-        [reset_button setTitle:@"Reset" forState:UIControlStateNormal];
+        UIImage *image = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"button_normal" ofType:@"png"]];
+        [reset_button setBackgroundImage:image forState:UIControlStateNormal];
+        image = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"button_pressed" ofType:@"png"]];
+        [reset_button setBackgroundImage:image forState:UIControlStateHighlighted];
         reset_button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
         [reset_button addTarget:self action:@selector(reset) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:reset_button];
