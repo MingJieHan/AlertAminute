@@ -14,6 +14,8 @@
 		EE0A5B8B25428F6B006BBCEA /* button_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8425428F6B006BBCEA /* button_normal@3x.png */; };
 		EE0A5B8C25428F6B006BBCEA /* button_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8525428F6B006BBCEA /* button_normal@2x.png */; };
 		EE0A5B8D25428F6B006BBCEA /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5B8625428F6B006BBCEA /* button_normal.png */; };
+		EE0A5C4D254660FD006BBCEA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0A5C4C254660FD006BBCEA /* MediaPlayer.framework */; };
+		EE0A5C5425466E1E006BBCEA /* abc.caf in Resources */ = {isa = PBXBuildFile; fileRef = EE0A5C5325466E1E006BBCEA /* abc.caf */; };
 		EE33FD0024B74AD600BE53F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33FCFF24B74AD600BE53F8 /* AppDelegate.m */; };
 		EE33FD0624B74AD600BE53F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33FD0524B74AD600BE53F8 /* ViewController.m */; };
 		EE33FD0924B74AD600BE53F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE33FD0724B74AD600BE53F8 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		EE0A5B8425428F6B006BBCEA /* button_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_normal@3x.png"; sourceTree = "<group>"; };
 		EE0A5B8525428F6B006BBCEA /* button_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_normal@2x.png"; sourceTree = "<group>"; };
 		EE0A5B8625428F6B006BBCEA /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
+		EE0A5C4C254660FD006BBCEA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EE0A5C5325466E1E006BBCEA /* abc.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = abc.caf; sourceTree = "<group>"; };
 		EE33FCFB24B74AD600BE53F8 /* Circulate Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Circulate Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE33FCFE24B74AD600BE53F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE33FCFF24B74AD600BE53F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0A5C4D254660FD006BBCEA /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,11 +75,20 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		EE0A5C4B254660FD006BBCEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE0A5C4C254660FD006BBCEA /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE33FCF224B74AD600BE53F8 = {
 			isa = PBXGroup;
 			children = (
 				EE33FCFD24B74AD600BE53F8 /* AlertAMinute */,
 				EE33FCFC24B74AD600BE53F8 /* Products */,
+				EE0A5C4B254660FD006BBCEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +110,7 @@
 				EE33FD0524B74AD600BE53F8 /* ViewController.m */,
 				EE0A5B7F25428F6B006BBCEA /* images */,
 				EE33FD1724B7511800BE53F8 /* abc.wav */,
+				EE0A5C5325466E1E006BBCEA /* abc.caf */,
 				EE33FD0724B74AD600BE53F8 /* Main.storyboard */,
 				EE33FD0A24B74AD700BE53F8 /* Assets.xcassets */,
 				EE33FD0C24B74AD700BE53F8 /* LaunchScreen.storyboard */,
@@ -173,6 +188,7 @@
 				EE0A5B8D25428F6B006BBCEA /* button_normal.png in Resources */,
 				EE0A5B8925428F6B006BBCEA /* button_pressed.png in Resources */,
 				EE0A5B8B25428F6B006BBCEA /* button_normal@3x.png in Resources */,
+				EE0A5C5425466E1E006BBCEA /* abc.caf in Resources */,
 				EE33FD0924B74AD600BE53F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

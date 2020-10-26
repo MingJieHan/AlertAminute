@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
-
 #define USER_SECONDS_KEY @"USER_SECONDS"
+
+
 @interface ViewController (){
     UILabel *label;
     AVPlayer *player;
@@ -22,7 +23,6 @@
     
     UIImageView *backgroundImageView;
     UIButton *reset_button;
-    SystemSoundID alert_sound_Id;
 }
 
 @end
@@ -134,12 +134,16 @@
 }
 
 -(void)play_sound{
-    if (alert_sound_Id == 0 ){
-        NSString *file = [[NSBundle mainBundle] pathForResource:@"abc" ofType:@"wav"];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:file], &alert_sound_Id);
-        
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+    
+    if (nil == player){
+        NSString *file = [[NSBundle mainBundle] pathForResource:@"abc" ofType:@"caf"];
+        player = [[AVPlayer alloc] initWithURL:[NSURL fileURLWithPath:file]];
+        [player setVolume:1.f];
     }
-    AudioServicesPlaySystemSound(alert_sound_Id);
+    [player seekToTime:CMTimeMake(0, 1)];
+    [player play];
+    return;
 }
 
 -(void)stop{
